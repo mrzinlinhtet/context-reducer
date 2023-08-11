@@ -1,13 +1,12 @@
 import Three from "./Three"
+import { useStateContext } from "./context/StateContext"
 
-const Two = ({count, increase, decrease}) => {
-
+const Two = () => {
+  const {count} = useStateContext() 
   return (
     <div>
-      <h1>Two - {count}</h1>
-      <button onClick={decrease}> - </button>
-      <button onClick={increase}> + </button>
-      <Three count={count} />
+      <h1>Two - {count} from two</h1>
+      <Three />
     </div>
   )
 }

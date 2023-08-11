@@ -1,11 +1,10 @@
-import { useContext } from "react"
-import { StateContext } from "./context/StateContext"
+import { useStateContext } from "./context/StateContext"
 
 const One = () => {
-  const {name} = useContext(StateContext)
+  const {count} = useStateContext()
   return (
     <div>
-      One - {name}
+      One - {count} from one
     </div>
   )
 }
